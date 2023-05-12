@@ -1,18 +1,18 @@
-A simple adventure game by Shuchen Liu based on a simple adventure game engine by [Adam Smith](https://github.com/rndmcnlly).
+A simple adventure game by [Shuchen Liu](https://github.com/Fallrain1763) based on a simple adventure game engine by [Adam Smith](https://github.com/rndmcnlly).
 
 Code requirements:
 - **4+ scenes based on `AdventureScene`**: Demo1, Demo2, Demo3, Demo4.
 - **2+ scenes *not* based on `AdventureScene`**: Intro, Outro.
 - **2+ methods or other enhancement added to the adventure game engine to simplify my scenes**:
     - Enhancement 1: floatingEffect() add a image and create a floating effect on it
-    - Enhancement 2: unsatisfied (name the method and explain the use of it).
+    - Enhancement 2: fadeEffect() add a image and create a fade effect on it
 
 Experience requirements:
 - **4+ locations in the game world**: Entrance, Left Room, Right Room, Exit
 - **2+ interactive objects in most scenes**: Two doors in Entrance, door and key in Left Room
 - **Many objects have `pointerover` messages**: Two doors in Entrance, door and key in Left Room
 - **Many objects have `pointerdown` effects**: Two doors in Entrance, door and key in Left Room
-- **Some objects are themselves animated**: Two arrows in Entrance, key in Left Room
+- **Some objects are themselves animated**: Two arrows in Entrance, firework in Exit
 
 Asset sources:
 - (For each image/audio/video asset used, describe how it was created. What tool did you use to create it? Was it based on another work? If so, how did you change it, and where can we learn more about the original work for comparison? Use [Markdown link syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#links).)

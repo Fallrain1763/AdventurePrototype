@@ -65,6 +65,17 @@ class AdventureScene extends Phaser.Scene {
         });
     }
 
+    fadeEffect(x, y, image) {
+        let i = this.add.image(x, y, image);
+        this.tweens.add({
+            targets: i,
+            alpha:0,
+            duration: 2000,
+            ease: 'Linear',
+            repeat: -1,
+        });
+    }
+
     showMessage(message) {
         this.messageBox.setText(message);
         this.tweens.add({

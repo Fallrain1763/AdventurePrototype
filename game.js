@@ -109,8 +109,18 @@ class Demo4 extends AdventureScene {
     constructor() {
         super("demo4", "Exit");
     }
+
+    preload(){
+        this.load.image('firework', './assets/firework.png');
+    }
+
     onEnter() {
-        
+        this.add.text(100, 200)
+        .setText("Congratulations, you escape !")
+        .setFontSize('70px')
+
+        this.fadeEffect(680, 600, 'firework');
+
         this.input.on('pointerdown', () => this.scene.start('outro'));
     }
 }
