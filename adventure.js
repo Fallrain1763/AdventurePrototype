@@ -53,6 +53,18 @@ class AdventureScene extends Phaser.Scene {
 
     }
 
+    floatingEffect(x, y, image) {
+        let a = this.add.image(x, y, image);
+        let b = y+30;
+        this.tweens.add({
+            targets: a,
+            y: b,
+            duration: 2000,
+            ease: 'Linear',
+            repeat: -1,
+        });
+    }
+
     showMessage(message) {
         this.messageBox.setText(message);
         this.tweens.add({
@@ -120,6 +132,8 @@ class AdventureScene extends Phaser.Scene {
             console.warn('losing item not held:', item);
             return;
         }
+        this.inventory.pop(item);
+        this.updateInventory();
         for (let text of this.inventoryTexts) {
             if (text.text == item) {
                 this.tweens.add({
@@ -131,10 +145,6 @@ class AdventureScene extends Phaser.Scene {
                 });
             }
         }
-        this.time.delayedCall(500, () => {
-            this.inventory = this.inventory.filter((e) => e != item);
-            this.updateInventory();
-        });
     }
 
     gotoScene(key) {
